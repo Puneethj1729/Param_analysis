@@ -1,0 +1,22 @@
+{% block content %}
+<h1>Download the File</h1>
+<table style="border: 5px solid black;">
+    <tr>
+        <th>Title</th>
+        <th>Document</th>
+    </tr>
+
+    {% for i in inventories %}
+    <tr>
+        <td>{{i.title}}
+        </td>
+        <td>
+            <a href="{{i.csv_file.url}}">
+               Download File
+           </a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tr>
+</table>
+{% endblock %}
